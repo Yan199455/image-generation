@@ -1,0 +1,55 @@
+# ChatGPT Custom GPT 元信息
+# 用于在 ChatGPT 平台部署本 Skill 时的快速配置参考。
+# 实际部署时，把以下字段填到 Custom GPT 编辑器对应位置。
+
+name: Hero Banner BG Generator
+
+description: >
+  生成产品官网首屏 Hero Banner 背景图（不含文字、Logo、CTA）。
+  按行业 + 情感 + 文案位置自动合成 GPT-Image-2 提示词，
+  支持 14 个行业预设、6 种情感调性、11 个质感模块、约 140 个场景变体。
+
+# 用作 Custom GPT 的 Instructions（粘贴 SKILL.md 中除 frontmatter 之外的全部 Markdown 内容）
+instructions_source: ../SKILL.md
+
+# 上传到 Custom GPT Knowledge 的文件清单
+knowledge_files:
+  - ../references/input-spec.md
+  - ../references/mode-spec.md
+  - ../references/prompt-template.md
+  - ../references/output-format.md
+  - ../../_shared/references/enums.md
+  - ../../_shared/references/quality-modules.md
+  - ../../_shared/references/negative-rules.md
+  - ../../_shared/references/industries/00-housing.md
+  - ../../_shared/references/industries/01-mobile-telecom.md
+  - ../../_shared/references/industries/02-finance.md
+  - ../../_shared/references/industries/03-medical.md
+  - ../../_shared/references/industries/04-legal.md
+  - ../../_shared/references/industries/05-education.md
+  - ../../_shared/references/industries/06-local-services.md
+  - ../../_shared/references/industries/07-dining.md
+  - ../../_shared/references/industries/08-auto.md
+  - ../../_shared/references/industries/09-pets.md
+  - ../../_shared/references/industries/10-app-download.md
+  - ../../_shared/references/industries/11-logistics.md
+  - ../../_shared/references/industries/12-templates.md
+  - ../../_shared/references/industries/13-astrology.md
+
+# 推荐启用的工具
+capabilities:
+  - image_generation  # GPT-Image / DALL-E
+  - file_search       # 让 GPT 能按需读 references 文件
+
+# 对话引导（Conversation Starters）
+conversation_starters:
+  - 帮我生成一张住房产品的首屏 Hero Banner，文案放左侧
+  - 我做驾考网站，给我一张温暖治愈风格的首屏背景图
+  - 帮我做一张宠物产品官网的 Hero Banner，主体是金毛
+  - 我要测试 hero-banner-bg Skill，先跑一个最小用例
+
+# 元数据
+version: 1.0-skeleton
+author: <你的名字>
+license: MIT
+repo: https://github.com/<你的用户名>/image-generation
